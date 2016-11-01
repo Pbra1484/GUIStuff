@@ -1,9 +1,10 @@
 package gui.view;
 
 import javax.swing.JFrame;
+import java.awt.Dimension;
 import gui.controller.GUIController;
 
-public class FirstFrame
+public class FirstFrame extends JFrame
 {
 	
 	private GUIController baseController;
@@ -12,5 +13,14 @@ public class FirstFrame
 	{
 		super();
 		this.baseController = baseController;
+		
+		this.setupFrame();
+	}
+	
+	private void setupFrame()
+	{
+		this.setSize(new Dimension(600, 400));
+		this.setLocationRelativeTo(null);
+		this.setVisible(true);
 	}
 }
