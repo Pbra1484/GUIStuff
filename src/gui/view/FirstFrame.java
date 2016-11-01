@@ -8,17 +8,21 @@ public class FirstFrame extends JFrame
 {
 	
 	private GUIController baseController;
+	private FirstPanel appPanel;
 	
 	public FirstFrame(GUIController baseController)
 	{
 		super();
 		this.baseController = baseController;
+		this.appPanel = new FirstPanel(baseController);
 		
 		this.setupFrame();
 	}
 	
 	private void setupFrame()
 	{
+		this.setContentPane(appPanel);
+		this.setTitle("Windows");
 		this.setSize(new Dimension(600, 400));
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
